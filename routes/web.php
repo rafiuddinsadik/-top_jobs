@@ -69,6 +69,11 @@ Route::group(
         // Posted Jobs
         Route::get('jobs', 'AdminJobController@index')->name('admin.jobs.index');
 
+        //Job Details
+        Route::get('job-details/{id}', 'AdminJobDetailsController@show')->name('admin.jobs.details');
+        //Approve/trash jobs
+        Route::post('job/{id}/update', 'AdminJobController@update')->name('admin.jobs.update');
+
         // Job Categories
         Route::get('job-categories', 'JobCategoryController@index');
         Route::resource('job-categories', 'JobCategoryController')->only([

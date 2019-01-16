@@ -26,9 +26,6 @@
     <!-- Section FAQ -->
     {{--@include('website.welcome.sections.faq')--}}
 
-    <!-- Footer -->
-    @include('layouts.components.footer')
-
     <div class="container">
     </div>
 @endsection

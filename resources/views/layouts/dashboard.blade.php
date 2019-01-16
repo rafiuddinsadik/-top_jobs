@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{ asset('dashboard/admin/css/style.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('dashboard/admin/images/favicon.png') }}" />
+
+    @stack('styles')
 </head>
 
 <body>

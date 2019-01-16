@@ -18,4 +18,13 @@ class AdminJobController extends Controller
         $compact = compact('jobs');
         return view('dashboard.admin.posted-jobs.index', $compact);
     }
+
+    public function update(Request $request, $id)
+    {
+        $job = Job::findOrFail($id);
+        $job->update([
+            'recent_status' =>  $request->status
+        ]);
+        return redirect()->route('admin.jobs.index');
+    }
 }

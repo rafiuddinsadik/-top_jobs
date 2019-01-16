@@ -16,7 +16,7 @@ class WelcomeController extends Controller
     public function index()
     {
         $popular_categories = Category::latest()->take(8)->get();
-        $featured_jobs = Job::latest()->take(6)->get();
+        $featured_jobs = Job::latest()->where(['recent_status' => 1])->get();
         $data = compact('popular_categories', 'featured_jobs');
         return view('website.welcome.index', $data);
     }

@@ -60,7 +60,7 @@
                                                 May 15, 2015
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-sm btn-success">View Details</a>
+                                                <a href="{{route('admin.jobs.details', [$job->id])}}" class="btn btn-sm btn-success">View Details</a>
                                             </td>
                                         </tr>
                                     @endforeach
