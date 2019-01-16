@@ -7,7 +7,7 @@
                         <img src="{{ asset('dashboard/admin/images/faces/face1.jpg') }}" alt="profile image">
                     </div>
                     <div class="text-wrapper">
-                        <p class="profile-name">Richard V.Welsh</p>
+                        <p class="profile-name">{{ \App\Models\User::findOrFail(auth()->id())->name }}</p>
                         <div>
                             <small class="designation text-muted">Manager</small>
                             <span class="status-indicator online"></span>
@@ -60,12 +60,26 @@
                 <span class="menu-title">Charts</span>
             </a>
         </li>
+
+        <!-- Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                 <i class="menu-icon mdi mdi-table"></i>
                 <span class="menu-title">Tables</span>
+                <i class="menu-arrow"></i>
             </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('job-categories.index')}}">Job Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('job-types.index')}}">Job Types</a>
+                    </li>
+                </ul>
+            </div>
         </li>
+
         <li class="nav-item">
             <a class="nav-link" href="pages/icons/font-awesome.html">
                 <i class="menu-icon mdi mdi-sticker"></i>

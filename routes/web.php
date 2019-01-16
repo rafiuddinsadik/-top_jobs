@@ -69,6 +69,18 @@ Route::group(
         // Posted Jobs
         Route::get('jobs', 'AdminJobController@index')->name('admin.jobs.index');
 
+        // Job Categories
+        Route::get('job-categories', 'JobCategoryController@index');
+        Route::resource('job-categories', 'JobCategoryController')->only([
+            'index', 'store', 'update', 'destroy'
+        ]);
+
+        // Job Types
+        Route::get('job-types', 'JobTypeController@index');
+        Route::resource('job-types', 'JobTypeController')->only([
+            'index', 'store', 'update', 'destroy'
+        ]);
+
     }
 );
 

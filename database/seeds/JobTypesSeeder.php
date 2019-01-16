@@ -17,7 +17,7 @@ class JobTypesSeeder extends Seeder
 
         foreach ($job_types as $job_type){
             \App\Models\JobType::create([
-                'user_id' => 3,
+                'user_id' => 2,
                 'name' => $job_type
             ]);
         }

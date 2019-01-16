@@ -34,6 +34,19 @@
         <!-- partial -->
         <div class="main-panel">
 
+            @if(session()->has('notification'))
+                <div class="pt-3">
+                    <div class="row d-flex justify-content-center">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Notification</strong> {{session()->get('notification')}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            @endif
+
             <!-- Main Content -->
             @yield('main-content')
              

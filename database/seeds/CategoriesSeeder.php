@@ -13,8 +13,8 @@ class CategoriesSeeder extends Seeder
     public function run()
     {
         $categories = [
-//            'Marketing',
-//            'Information Technology',
+            'Marketing',
+            'Information Technology',
             'Web Design',
             'Graphics',
             'App Development',
@@ -27,7 +27,7 @@ class CategoriesSeeder extends Seeder
 
         foreach ($categories as $category){
             Category::create([
-                'user_id' => 3,
+                'user_id' => 2,
                 'slug' => str_slug($category),
                 'name' => $category,
             ]);

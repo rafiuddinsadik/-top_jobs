@@ -1,9 +1,10 @@
 <section>
+
     <div class="jumbotron">
         <div class="container text-center">
             <h1>The Easiest Way to Get Your New Job</h1>
             <p>Find Jobs, Employment & Career Opportunities</p>
-
+            <div class="d-flex justify-content-center">
             <div class="home-search-form-wrapper">
                 <form class="form-inline">
                     <div class="form-group mb-2">
@@ -18,5 +19,6 @@
                 </form>
             </div>
         </div>
+    </div>
     </div>
 </section>

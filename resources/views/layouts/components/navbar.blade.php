@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-laravel">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top navbar-laravel">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Top Jobs') }}

@@ -15,6 +15,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Extra CSS -->
     @stack('styles')
@@ -36,6 +38,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+            @section('footer')
+                @include('layouts.components.footer')
+            @show
     </div>
 
 
