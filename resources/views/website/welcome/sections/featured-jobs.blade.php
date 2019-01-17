@@ -23,7 +23,7 @@
                             <div>
                                 <a href="#" class="btn btn-sm btn-primary">{{ $featured_job->getJobType->name }}</a>
                                 <br>
-                                <span class="text-muted">{{ $featured_job->updated_atgi->diffForHumans() }}</span>
+                                <span class="text-muted">{{ $featured_job->updated_at->diffForHumans() }}</span>
                             </div>
                         </div>
                     @endif

@@ -46,8 +46,8 @@
                                                 {{ $job->user->name }}
                                             </td>
                                             <td>
-                                                @foreach($job->categories()->get() as $job_category)
-                                                    <span class="badge badge-dark">{{ $job_category->category->name }}</span>
+                                                @foreach($job->categories as $job_category)
+                                                    <span class="badge badge-dark">{{ $job_category->name }}</span>
                                                 @endforeach
                                             </td>
                                             <td>
